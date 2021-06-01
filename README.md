@@ -5,8 +5,10 @@ However the installer for Silent Option is bloaty (InstallShield) and the instal
 
 This repository will provide a portable archive file with Silent Option so you don't have to go through the bloat installation
 
-NOTE: YOU NEED TO MAKE A REGISTRY VALUE ENTRY WITH THE NAME `MofImagePath` AND THE VALUE POINTING TO THE LOCATION OF `FanControlDefs.dll` FOUND IN THE ARCHIVE. THIS ENTRY GOES IN `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WmiAcpi` WITH THE TYPE `REG_EXPAND_SZ`.
+NOTE: YOU NEED TO MAKE A REGISTRY VALUE ENTRY WITH THE NAME `MofImagePath` AND THE VALUE POINTING TO THE LOCATION OF `FanControlDefs.dll` FOUND IN THE ARCHIVE. THIS ENTRY GOES IN `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WmiAcpi` WITH THE TYPE `REG_EXPAND_SZ`
 
-For example: If I extracted the Silent Option archive and put the Silent Option folder in my `C:\Program Files (x86)` folder, the path of `FanControlDefs.dll` would be `C:\Program Files (x86)\SilentOption\FanControlDefs.dll`. Therefore, I would set the `MofImagePath` registry key to `%programfiles(x86)%\SilentOption\FanControlDefs.dll` (`%programfiles(x86)%` is an environment variable pointing to your x86 Program Files directory.
+For example: If I extracted the Silent Option archive and put the Silent Option folder in my `C:\Program Files (x86)` folder, the path of `FanControlDefs.dll` would be `C:\Program Files (x86)\SilentOption\FanControlDefs.dll`. Therefore, I would set the `MofImagePath` registry key to `%programfiles(x86)%\SilentOption\FanControlDefs.dll` (`%programfiles(x86)%` is an environment variable pointing to your x86 Program Files directory
 
-If you don't create this registry key, the `FanControlDefs.dll` containing custom MSI MOF WMI definitions won't be loaded by the `WmiAcpi` service, and Silent Option will NOT work functionally at all.
+If you don't create this registry key, the `FanControlDefs.dll` containing custom MSI MOF WMI definitions won't be loaded by the `WmiAcpi` service, and Silent Option will NOT work functionally at all
+
+ANOTHER NOTE: Silent Option w/ custom MOF defs only works on my MSI GF65-9SEXR laptop. It may not work for you, and I'm not helping whatsoever with any issues
