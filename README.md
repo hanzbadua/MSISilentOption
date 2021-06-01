@@ -1,5 +1,6 @@
 # MSISilentOption
 Silent Option is a tiny applet made by MSI for MSI laptops as a fan control solution (original download found [here](https://forum-en.msi.com/index.php?threads/updated-2016-05-06-silent-option-fan-control-application-for-msi-laptops.255972/))
+
 However the installer for Silent Option is bloaty (InstallShield) and the installer installs a lot of unnecessary service DLLS (such as the MSI SCM service dll, which is not required for newer MSI laptops and has been replaced by WMI definition instrumentation)
 
 This repository will provide a portable archive file with Silent Option so you don't have to go through the bloat installation
