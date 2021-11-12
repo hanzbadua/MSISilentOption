@@ -3,7 +3,7 @@ Silent Option is a tiny applet made by MSI for MSI laptops as a fan control solu
 
 However the installer for Silent Option is bloaty (InstallShield) and the installer installs a lot of unnecessary service DLLS (such as the MSI SCM service dll, which is not required for newer MSI laptops and has been replaced by WMI definition instrumentation)
 
-This repository will provide a portable archive file with Silent Option so you don't have to go through the bloat installation
+This repository will provide a portable archive file ([under Releases](https://github.com/hanzbadua/MSISilentOption/releases)) with Silent Option so you don't have to go through the bloat installation
 
 NOTE: YOU NEED TO MAKE A REGISTRY KEY ENTRY WITH THE NAME `MofImagePath` AND THE VALUE POINTING TO THE LOCATION OF `FanControlDefs.dll` FOUND IN THE ARCHIVE. THIS ENTRY GOES IN `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WmiAcpi` WITH THE TYPE `REG_EXPAND_SZ`
 
